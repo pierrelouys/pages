@@ -26,7 +26,7 @@ for entry in root:
             continue
             
         child_lines = child.text.split("\n")
-        p = re.compile(r'tation\s\([^\)]+\)\s\"([^"]+)\"')
+        p = re.compile(r'tation\s\([^"]+\"([^"]+)\"')
         
         release = ""
         for line in child_lines:
