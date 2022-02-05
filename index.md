@@ -1,6 +1,6 @@
 ## Arcade ports lists
 
-- [PSX](https://github.com/pierrelouys/pages/edit/gh-pages/psx-arcade.md)
+- [PSX](psx-arcade.md)
 
 ## Welcome to GitHub Pages
 
