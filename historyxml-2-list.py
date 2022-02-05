@@ -24,6 +24,14 @@ for entry in root:
                 search_matches += 1
         if search_matches < 1:
             continue
+            
+        child_lines = child.text.split("\n")
+        p = re.compile(r'tation\s\([^\)]+\)\s\"([^"]+)\"')
+        
+        release = ""
+        for line in child_lines:
+            if p.search(line) != None:
+                release = " (in " + p.search(line).group(1) + ")"
                 
         # print("http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=" + rom_name, child.text.split("\n")[0], child.text.split("\n")[1], child.text.split("\n")[2], child.text.split("\n")[3])
         title = child.text.split("\n")[3]
@@ -33,4 +41,4 @@ for entry in root:
             title = child.text.split("\n")[1]
         if title == "":
             title = child.text.split("\n")[0]
-        print("- [" + title + "]" + "(" + "http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=" + rom_name + ")" )
+        print("- [" + title + "]" + "(" + "http://adb.arcadeitalia.net/dettaglio_mame.php?game_name=" + rom_name + ")" + release)
