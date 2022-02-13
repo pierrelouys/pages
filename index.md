@@ -1,6 +1,7 @@
 ## Arcade ports lists
 
 - [PSX](psx-arcade.md)
+- [PSP](PSP-arcade.md)
 
 ## Welcome to GitHub Pages
 
